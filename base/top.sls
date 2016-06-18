@@ -9,3 +9,4 @@ base:
     - remmina
     - spotify
     - ssh
+    - emacs
