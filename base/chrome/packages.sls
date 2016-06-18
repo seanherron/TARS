@@ -14,7 +14,7 @@ Install Lastpass:
         cd /tmp
         sudo tar xjvf lplinux.tar.bz2
         cd /tmp/lplinux
-        sudo chown -R sean /tmp/lplinux
+        sudo chown -R {{ pillar['user'] }} /tmp/lplinux
         ./install_lastpass.sh
-    - runas: sean
-    - unless: test -d /home/sean/.lastpass
+    - runas: {{ pillar['user'] }}
+    - unless: test -d /home/{{ pillar['user'] }}/.lastpass
