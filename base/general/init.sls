@@ -1,3 +1,3 @@
 include:
-  .packages
-  .config
+  - .packages
+  - .config

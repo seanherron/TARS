@@ -4,6 +4,11 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
+if ! [ -x "$(command -v git)" ]; then
+  echo "Git not installed, installing git"
+  apt-get install -y git
+fi
+
 if ! [ -x "$(command -v salt-minion)" ]; then
   echo "Salt minion not installed, installing salt minion"
   apt-get install -y curl
@@ -17,9 +22,9 @@ fi
 if [ -x "$(command -v salt-minion)" ]; then
   echo "Setting up Salt"
   echo "file_client: local" > /etc/salt/minion.d/file_client.conf
-  echo -e "file_roots:\n  base:\n    - /home/sean/.tars/base" > /etc/salt/minion.d/file_roots.conf
+  echo -e "file_roots:\n  base:\n    - /home/$SUDO_USER/.tars/base" > /etc/salt/minion.d/file_roots.conf
   service salt-minion stop
-  salt-call --local state.highstate
+  salt-call --local state.highstate pillar="{'user': $SUDO_USER}"
   echo "To set your theme, run the following commands:"
   echo 'xfconf-query -c xsettings -p /Net/ThemeName -s "Numix-Holo"'
   echo 'xfconf-query -c xfwm4 -p /general/theme -s "Numix-Holo"'

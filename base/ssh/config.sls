@@ -15,6 +15,3 @@ SSH Key Directory:
 SSH Authorized Keys:
   file.touch:
     - name: /home/{{ pillar['user'] }}/.ssh/authorized_keys
-    - mode: 400
-    - user: {{ pillar['user'] }}
-    - group: {{ pillar['user'] }}
