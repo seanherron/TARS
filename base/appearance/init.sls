@@ -1,3 +1,4 @@
 include:
   - .numix
   - .desktop
+  - .panel
