@@ -10,3 +10,6 @@ base:
     - spotify
     - ssh
     - emacs
+    - icedtea
+    - networkmanager
+    - openvpn
