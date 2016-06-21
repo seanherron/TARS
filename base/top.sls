@@ -13,3 +13,4 @@ base:
     - icedtea
     - networkmanager
     - openvpn
+    - virt-manager
