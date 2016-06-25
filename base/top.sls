@@ -11,5 +11,8 @@ base:
     - ssh
     - emacs
     - atom
+    - icedtea
+    - networkmanager
+    - openvpn
     - virt-manager
     - seti
