@@ -10,4 +10,6 @@ base:
     - spotify
     - ssh
     - emacs
+    - atom
     - virt-manager
+    - seti

@@ -19,7 +19,7 @@ Clone deft for emacs:
 
 Personal Emacs config:
   file.managed:
-    - name: /home/{{ pillar['user'] }}/.emacs.d/init.el
+    - name: /home/{{ pillar['user'] }}/.emacs.d/personal/init.el
     - user: {{ pillar['user'] }}
     - source: salt://emacs/files/init.el
     - template: jinja
