@@ -9,6 +9,11 @@
 ;; Deft configuration
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; M-x package-install RET deft RET
+
+(defvar prelude-vendor-dir (expand-file-name "vendor" prelude-dir)
+  "This directory houses packages that are not yet available in ELPA (or MELPA).")
+
+
 (require 'org)
 (require 'deft)
 (setq deft-extension "org")

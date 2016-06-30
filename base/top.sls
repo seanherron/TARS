@@ -14,3 +14,4 @@ base:
     - networkmanager
     - openvpn
     - virt-manager
+    - thinkpad
