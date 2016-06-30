@@ -5,7 +5,8 @@
 ;; Line wrap at word rather than letter.
 (global-visual-line-mode t)
 ;; Prelude loads syntax checking by drefault, which breaks some org mode bindings. Disable globally for now.
-;;(global-flycheck-mode -1)
+(global-flycheck-mode -1)
+
 ;; Deft configuration
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; M-x package-install RET deft RET
@@ -17,6 +18,7 @@
 (require 'org)
 (require 'deft)
 (setq deft-extension "org")
+(setq deft-default-extension "org")
 (setq deft-text-mode 'org-mode)
 (setq deft-directory "~/notes")
 (global-set-key [f8] 'deft)
@@ -28,9 +30,11 @@
             (visual-line-mode -1)
            ;(toggle-truncate-lines 1)
            ))
+
 ;; org-mode configuration
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (global-set-key "\C-ca" 'org-agenda)
 ;;(setq org-indent-mode t)
 (setq org-startup-indented t)
 ;;(setq org-startup-truncated nil)
+
