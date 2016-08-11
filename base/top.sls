@@ -16,3 +16,4 @@ base:
     - openvpn
     - virt-manager
     - thinkpad
+    - vagrant
