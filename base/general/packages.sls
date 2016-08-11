@@ -6,3 +6,6 @@ Install gksu:
   pkg.latest:
     - name: gksu
 
+Install Virtualbox:
+  pkg.latest:
+    - name: virtualbox
