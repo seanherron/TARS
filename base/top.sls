@@ -17,3 +17,4 @@ base:
     - virt-manager
     - thinkpad
     - vagrant
+    - claws
